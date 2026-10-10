@@ -1,0 +1,936 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #352318;
+    background: #f4e3c3;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    padding: 12px 0;
+    background: rgba(38, 23, 15, 0.96);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    color: #fff4dc;
+    font-family: Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+    color: #e9b66c;
+}
+
+.navbar-brand i {
+    color: #e9b66c;
+    margin-right: 7px;
+}
+
+.nav-link {
+    color: #fff !important;
+    margin: 0 6px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #e9b66c !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(233, 182, 108, 0.35);
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* ================= BUTTONS ================= */
+
+.btn-kuchi {
+    color: #3b2619;
+    background: #f6ead3;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 22px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-kuchi:hover {
+    color: #3b2619;
+    background: #e5c98f;
+}
+
+/* ================= HERO ================= */
+
+.hero-section {
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(35, 20, 12, 0.90),
+            rgba(35, 20, 12, 0.48)
+        ),
+        url("https://i.pinimg.com/1200x/e9/68/9e/e9689e47fa3b6358c9ed83d6c9bc444c.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.eyebrow {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+    color: #e9b66c;
+}
+
+.eyebrow.dark {
+    color: #a66f35;
+}
+
+.hero-section h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.98;
+    margin-bottom: 25px;
+    color: #fff4dc;
+}
+
+.hero-section h1 span {
+    display: block;
+    color: #e9b66c;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.hero-text {
+    max-width: 600px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    color: #ead9c0;
+}
+
+.hero-buttons .btn {
+    margin-right: 8px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-section {
+    padding: 100px 0;
+    background: #f4e3c3;
+    color: #352318;
+}
+
+.about-section h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.7rem, 5vw, 4.8rem);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.about-section h2 span {
+    display: block;
+    color: #a66f35;
+    font-style: italic;
+}
+
+.about-section p {
+    color: #695648;
+    line-height: 1.8;
+}
+
+.about-points {
+    margin-top: 30px;
+}
+
+.about-points > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.about-points i {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #6b482e;
+    color: #f6dfad;
+    font-size: 1.2rem;
+}
+
+.about-points strong {
+    display: block;
+    color: #3b2619;
+}
+
+.about-points small {
+    display: block;
+    color: #806b5b;
+    margin-top: 3px;
+}
+
+.about-card {
+    position: relative;
+    padding: 45px;
+    min-height: 480px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(76, 47, 30, 0.97),
+            rgba(45, 27, 19, 0.98)
+        );
+
+    color: #fff4dc;
+    box-shadow: 0 25px 60px rgba(60, 35, 20, 0.25);
+}
+
+.about-card::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -70px;
+    top: -70px;
+    border-radius: 50%;
+    border: 35px solid rgba(233, 182, 108, 0.10);
+    pointer-events: none;
+}
+
+.about-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    background: #e9b66c;
+    color: #40291b;
+    font-size: 1.6rem;
+}
+
+.about-year {
+    display: block;
+    color: #e9b66c;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.about-card h3 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.3rem, 4vw, 3.7rem);
+    line-height: 1.05;
+    margin-bottom: 20px;
+    color: #fff4dc;
+}
+
+.about-card h3 span {
+    display: block;
+    color: #e9b66c;
+    font-style: italic;
+}
+
+.about-card > p {
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.8;
+}
+
+.about-line {
+    height: 1px;
+    width: 100%;
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.about-mini {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.about-mini i {
+    font-size: 1.7rem;
+    color: #e9b66c;
+}
+
+.about-mini strong {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+}
+
+.about-mini small {
+    display: block;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 3px;
+}
+
+/* ================= MENU ================= */
+
+.menu-section {
+    padding: 100px 0;
+    background: #ead0a2;
+    color: #352318;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.7rem, 5vw, 4.7rem);
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 span {
+    color: #a66f35;
+    font-style: italic;
+}
+
+.section-heading > p:last-child {
+    color: #705d4d;
+    line-height: 1.7;
+}
+
+.menu-card {
+    height: 100%;
+    padding: 32px 25px;
+    border-radius: 20px;
+    background: #fff8e9;
+    color: #352318;
+    border: 2px solid rgba(166, 111, 53, 0.22);
+    box-shadow: 0 12px 30px rgba(67, 39, 21, 0.10);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(67, 39, 21, 0.18);
+}
+
+.menu-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 50%;
+    background: #6b482e;
+    color: #f5d99f;
+    font-size: 1.7rem;
+}
+
+.menu-card > span {
+    color: #a66f35;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.menu-card h3 {
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    margin: 10px 0 12px;
+}
+
+.menu-card p {
+    color: #746052;
+    line-height: 1.7;
+}
+
+.menu-card a {
+    color: #9a622e;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.menu-card a:hover {
+    color: #5e3b24;
+}
+
+.menu-card a i {
+    margin-left: 5px;
+}
+
+/* ================= SPECIAL ================= */
+
+.special-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #4b2d1d, #2c1b13);
+    color: #fff4dc;
+}
+
+.special-section h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    line-height: 1;
+}
+
+.special-section h2 span {
+    display: block;
+    color: #e9b66c;
+    font-style: italic;
+}
+
+.special-section p {
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.8;
+}
+
+.special-card {
+    min-height: 230px;
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff4dc;
+    border: 1px solid rgba(233, 182, 108, 0.55);
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.special-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.special-card i {
+    display: block;
+    margin-bottom: 18px;
+    color: #e9b66c;
+    font-size: 2.4rem;
+}
+
+.special-card h3 {
+    font-family: Georgia, serif;
+}
+
+.special-card p {
+    font-size: 0.9rem;
+}
+
+/* ================= BRANCHES ================= */
+
+.branches-section {
+    padding: 100px 0;
+    background: #f8ecd7;
+    color: #352318;
+}
+
+.branch-card {
+    height: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    background: #fffaf1;
+    color: #352318;
+    border: 1px solid rgba(145, 97, 50, 0.25);
+    box-shadow: 0 10px 30px rgba(61, 38, 22, 0.08);
+    transition: 0.3s;
+}
+
+.branch-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(61, 38, 22, 0.16);
+}
+
+.branch-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: #6b482e;
+    color: #f3d79e;
+    font-size: 1.3rem;
+}
+
+.branch-card > span {
+    color: #a66f35;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.branch-card h3 {
+    margin: 8px 0 12px;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+}
+
+.branch-card p {
+    min-height: 60px;
+    color: #705d4d;
+    line-height: 1.6;
+}
+
+.branch-card a {
+    color: #95602f;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.branch-card a:hover {
+    color: #4e301e;
+}
+
+.branch-card a i {
+    margin-left: 5px;
+}
+
+/* ================= CTA ================= */
+
+.cta-section {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    color: #fff4dc;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(37, 22, 14, 0.78),
+            rgba(37, 22, 14, 0.90)
+        ),
+        url("https://i.pinimg.com/1200x/e9/68/9e/e9689e47fa3b6358c9ed83d6c9bc444c.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-section h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+}
+
+.cta-section h2 span {
+    display: block;
+    color: #e9b66c;
+    font-style: italic;
+}
+
+.cta-section p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #ead9c0;
+    line-height: 1.8;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 22px 0;
+    background: #21140e;
+    color: #d8c8b4;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #eee0ca;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+footer a:hover {
+    color: #e9b66c;
+}
+
+/* ================= LANDING RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+    .navbar {
+        background: rgba(38, 23, 15, 0.98);
+    }
+
+    .navbar .btn {
+        margin-top: 10px;
+    }
+
+    .about-card {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 90vh;
+    }
+
+    .hero-section h1 {
+        font-size: 3.1rem;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .about-section,
+    .menu-section,
+    .special-section,
+    .branches-section {
+        padding: 70px 20px;
+    }
+
+    .about-card {
+        padding: 30px;
+        border-radius: 24px;
+    }
+
+    .menu-card {
+        padding: 28px 22px;
+    }
+
+    .branch-card {
+        padding: 25px;
+    }
+
+    .special-section {
+        text-align: center;
+    }
+
+    .cta-section {
+        min-height: 70vh;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 8px 6px 0;
+    }
+}
+
+
+/* ========================================
+   PART 2: LOGIN AND REGISTER
+======================================== */
+
+/* ================= AUTH BACKGROUND ================= */
+
+body.auth-page {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #fff3df;
+
+    background-image:
+        linear-gradient(
+            rgba(45, 27, 16, 0.30),
+            rgba(35, 20, 12, 0.55)
+        ),
+        url("https://i.pinimg.com/1200x/e9/68/9e/e9689e47fa3b6358c9ed83d6c9bc444c.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ================= AUTH WRAPPER ================= */
+
+.auth-page .auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+/* ================= AUTH CARD ================= */
+
+.auth-page .auth-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 40px 55px;
+    border-radius: 0;
+
+    background: rgba(55, 34, 21, 0.88);
+    border: 1px solid rgba(225, 185, 111, 0.60);
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+}
+
+/* ================= BACK HOME ================= */
+
+.auth-page .back-home {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #e4b45f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-page .back-home:hover {
+    color: #ffe2a5;
+}
+
+/* ================= AUTH LOGO ================= */
+
+.auth-page .auth-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+    background: #6b4a2c;
+    color: #f5d79b;
+    font-size: 32px;
+}
+
+/* ================= AUTH TITLES ================= */
+
+.auth-page .auth-card h1 {
+    color: #fff3d6;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.4);
+}
+
+.auth-page .auth-subtitle {
+    color: #e5cfad;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ================= AUTH LABELS ================= */
+
+.auth-page .form-label {
+    display: block;
+    color: #fff4df;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* ================= AUTH INPUTS ================= */
+
+.auth-page .form-control {
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 15px;
+
+    background: rgba(32, 20, 14, 0.90);
+    color: #fff3df;
+
+    border: 2px solid #b58a4b;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.auth-page .form-control::placeholder {
+    color: #bdb1a3;
+    opacity: 1;
+}
+
+.auth-page .form-control:focus {
+    background: rgba(40, 25, 17, 0.95);
+    color: #fff3df;
+    border-color: #e1b96f;
+
+    box-shadow: 0 0 0 0.15rem rgba(225, 185, 111, 0.18);
+}
+
+.auth-page .form-control:invalid:focus {
+    border-color: #d76b55;
+}
+
+.auth-page .form-text {
+    display: block;
+    margin-top: 6px;
+    color: #e5cfad;
+    font-size: 13px;
+}
+
+/* ================= PHP VALIDATION MESSAGES ================= */
+
+.auth-page .alert {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.auth-page .alert ul {
+    padding-left: 20px;
+}
+
+.auth-page .validation-message {
+    display: none;
+    color: #ef9874;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 6px;
+    text-align: left;
+}
+
+/* Browser validation for inputs using .validation-message */
+.auth-page input:user-invalid ~ .validation-message {
+    display: block;
+}
+
+/* ================= AUTH BUTTON ================= */
+
+.auth-page .auth-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #f6e7c8;
+    color: #4b2d1c;
+
+    font-size: 17px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.auth-page .auth-btn:hover {
+    background: #e6c989;
+    color: #382216;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.auth-page .auth-btn:focus-visible {
+    outline: 3px solid #e1b96f;
+    outline-offset: 3px;
+}
+
+/* ================= ACCOUNT LINKS ================= */
+
+.auth-page .auth-switch {
+    color: #eadbc5;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.auth-page .auth-switch a {
+    color: #e4b45f;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-page .auth-switch a:hover {
+    color: #ffe2a5;
+    text-decoration: underline;
+}
+
+/* ================= AUTH MOBILE ================= */
+
+@media (max-width: 575.98px) {
+    .auth-page .auth-wrapper {
+        padding: 20px 12px;
+    }
+
+    .auth-page .auth-card {
+        padding: 30px 22px;
+    }
+
+    .auth-page .auth-card h1 {
+        font-size: 27px;
+    }
+
+    .auth-page .auth-subtitle {
+        font-size: 14px;
+    }
+
+    .auth-page .form-label {
+        font-size: 15px;
+    }
+
+    .auth-page .form-control {
+        min-height: 48px;
+        font-size: 15px;
+    }
+
+    .auth-page .auth-btn {
+        min-height: 48px;
+        font-size: 16px;
+    }
+
+    .auth-page .auth-switch {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    body.auth-page {
+        background-attachment: scroll;
+    }
+}
